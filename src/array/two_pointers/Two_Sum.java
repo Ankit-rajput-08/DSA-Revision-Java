@@ -33,6 +33,8 @@ Output: [0,1]
 
 Pattern:
 Two Pointers / Brute Force
+Two Pointers / Optimize
+
 
 Approach:
 1. Iterate through array using first loop
@@ -44,6 +46,7 @@ Approach:
 
 Time Complexity:
 O(n²)
+O(n)
 
 Space Complexity:
 O(1)
@@ -71,5 +74,25 @@ public class Two_Sum {
         return new int[]{-1,-1};
 
     }
+
+     public int[] twoSum2(int[] numbers, int target) {
+        int n = numbers.length;
+
+        int i = 1;
+        int j = n -1;
+        while(i < j){
+            if(numbers[i] + numbers[j] == target){
+                return new int[] {i, j};
+            }
+            else if(numbers[i] + numbers[j] < target){
+                i++;
+            }
+            else{
+                j--;
+            }
+        }
+        return new int[] {-1};
+    }
+
 
 }
