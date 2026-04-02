@@ -49,8 +49,6 @@ public class GfgSegregate0and1 {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
-                i++;
-                j--;
             }
         }
     }
