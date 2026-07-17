@@ -8,4 +8,10 @@ class Tair {
         this.first = first;
         this.second = second;
     }
+    int num;
+    char task;
+    Tair(int num, char task){
+        this.num = num;
+        this.task = task;
+    }
 }
